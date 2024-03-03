@@ -11,7 +11,7 @@ How to write your own scipt
 Clone this repo, install `requirements.txt` into a python virtual enviornment,
 then run the script:
 
-    python eoscript.py
+    python main.py
 
 This will generate the named CSV file that you can load into Eclipse Orchestrator.
 You can verify correctness by **File** -> **View Exposure Sequence** which will dump a time orderd list of the

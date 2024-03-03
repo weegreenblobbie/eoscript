@@ -6,53 +6,6 @@ class Quality:
     raw = "RAW"           # RAW only
     raw_fjpg = "RAW+F-JPG"  # RAW + Fine JPEG
 
-
-class Exposure:
-
-    def __init__(self, numerator, denominator=1):
-        assert numerator >= 1, f"numerator must be >= 1, got {numerator}"
-        assert denominator >= 1, f"denominator must be >= 1, got {denominator}"
-        self._numerator = int(numerator)
-        self._denominator = int(denominator)
-
-    def __gt__(self, other):
-        if isinstance(other, float):
-            lhs = float(self._numerator) / float(self._denominator)
-            return lhs > other
-        assert isinstance(other, Exposure)
-        rhs = float(other._numerator) / float(other._denominator)
-        return lhs > rhs
-
-    def __truediv__(self, denominator):
-        self._denominator = int(abs(denominator))
-        assert denominator != 0, "Division by 0!"
-        return self
-
-    def __str__(self):
-        out = f"{self._numerator}"
-        if self._denominator != 1:
-            out += f"/{self._denominator}"
-        return f"{out:6s}"
-
-    def step_faster(self, ev_step):
-        """Makse exposure faster by 2 * ev_step"""
-        if self._numerator == 1:
-            self._denominator *= 2 * ev_step
-        else:
-            self._numerator //= 2 * ev_step
-
-    def step_slower(self, ev_step):
-        """Makse exposure slower by 2 * ev_step"""
-        if self._numerator > 1:
-            self._numerator *= 2 * ev_step
-        else:
-            self._denominator //= 2 * ev_step
-
-    def noramalize(self):
-        gcd = math.gcd(self._numerator, self._denominator)
-        self._numerator /= gcd
-        self._denominator /= gcd
-
 class Dur:
     """Duration"""
     minute = 60.0
@@ -60,7 +13,7 @@ class Dur:
 
 
 class Script:
-    def __init__(self, c1, c2, max, c3, c4, minimum_time_step=0.2):
+    def __init__(self, c1, c2, max, c3, c4, minimum_time_step=3.0):
         self._minimum_time_step = minimum_time_step
         self._camera = None
         self._comment = None
@@ -260,67 +213,3 @@ class Script:
             fout.write(out)
 
         print(f"Wrote {filename}")
-
-#------------------------------------------------------------------------------
-# Write you scirpt!
-
-_1 = Exposure(1)
-
-script = Script(
-    c1  = "2024/04/08 12:21:27.5 PM",
-    c2  = "2024/04/08  1:38:46.6 PM",
-    max = "2024/04/08  1:40:58.0 PM",
-    c3  = "2024/04/08  1:43:09.4 PM",
-    c4  = "2024/04/08  3:01:20.9 PM",
-    )
-
-script.camera = "Nikon Z7"
-script.fstop = 8
-
-script.file_comment = "# C1 -> C2 partials"
-script.iso = 800
-script.phase = "C1"
-script.exposure = _1 / 400
-script.comment = "C1 -> C2 partials"
-
-script.capture("12:23:27 PM")
-script.capture("12:31:35 PM")
-script.capture("12:39:43 PM")
-script.capture("12:47:51 PM")
-script.capture("12:55:59 PM")
-script.capture("01:04:07 PM")
-script.capture("01:12:15 PM")
-script.capture("01:20:23 PM")
-script.capture("01:28:31 PM")
-script.capture("01:36:46 PM")
-
-script.phase = "C2"
-script.offset = -15.0
-script.iso = 64
-script.exposure = _1 / 500
-script.comment = "diamond ring / baily's beads"
-script.file_comment = "# C2 diamond ring / baily's beads - bracket 1"
-script.capture_bracket(7)
-script.offset += 1
-script.file_comment = "# C2 diamond ring / baily's beads - bracket 2"
-script.capture_bracket(7)
-script.offset += 1
-script.file_comment = "# C2 diamond ring / baily's beads - bracket 3"
-script.capture_bracket(7)
-script.offset += 1
-script.file_comment = "# C2 diamond ring / baily's beads - bracket 4"
-script.capture_bracket(7)
-script.offset += 1
-script.file_comment = "# C2 diamond ring / baily's beads - bracket 5"
-script.capture_bracket(7)
-script.offset += 1
-script.file_comment = "# C2 diamond ring / baily's beads - bracket 6"
-script.capture_bracket(7)
-script.offset += 1
-script.file_comment = "# C2 diamond ring / baily's beads - bracket 7"
-script.capture_bracket(7)
-script.offset += 1
-script.file_comment = "# C2 diamond ring / baily's beads - bracket 8"
-script.capture_bracket(7)
-
-script.save("nick.csv")
