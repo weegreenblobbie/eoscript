@@ -13,7 +13,7 @@ class Dur:
 
 
 class Script:
-    def __init__(self, c1, c2, max, c3, c4, minimum_time_step=3.0):
+    def __init__(self, c1=None, c2=None, max=None, c3=None, c4=None, minimum_time_step=3.0):
         self._minimum_time_step = minimum_time_step
         self._camera = None
         self._comment = None
@@ -22,20 +22,23 @@ class Script:
         self._fstop = None
         self._iso = None
         self._phase = None
-        self._offset = None
+        self._offset = 0.0
         self._qualiy = Quality.raw_fjpg
         self._mirror_lock_up = 0.0  # Mirrorless cameras don't have a mirror!
         self._incremental = 'N' # Only changes in camera settings and transmitted via USB.
-        self._c1 = dateutil.parser.parse(c1)
-        self._c2 = dateutil.parser.parse(c2)
-        self._max = dateutil.parser.parse(max)
-        self._c3 = dateutil.parser.parse(c3)
-        self._c4 = dateutil.parser.parse(c4)
-        assert self._c1 < self._c2
-        assert self._c2 < self._max
-        assert self._max < self._c3
-        assert self._c3 < self._c4
-        self._phase_to_time = {"C1": self._c1, "C2": self._c2, "MAX": self._max, "C3": self._c3, "C4": self._c4}
+        self._phase_to_time = None
+        self._c1 = dateutil.parser.parse(c1) if c1 else c1
+        self._c2 = dateutil.parser.parse(c2) if c2 else c2
+        self._max = dateutil.parser.parse(max) if max else max
+        self._c3 = dateutil.parser.parse(c3) if c3 else c3
+        self._c4 = dateutil.parser.parse(c4) if c4 else c4
+        if any([c1, c2, max, c3, c4]):
+            assert all([c1, c2, max, c3, c4]), f"If any phase is initialized, they all must be initialized"
+            assert self._c1 < self._c2
+            assert self._c2 < self._max
+            assert self._max < self._c3
+            assert self._c3 < self._c4
+            self._phase_to_time = {"C1": self._c1, "C2": self._c2, "MAX": self._max, "C3": self._c3, "C4": self._c4}
 
     @property
     def camera(self):
@@ -101,12 +104,13 @@ class Script:
         if isinstance(abs_time, str):
             assert abs_time.endswith("PM") or abs_time.endswith("AM"), f"Unexpected time: {abs_time}"
             assert len(abs_time) in {len("HH:MM:SS PM"),len("HH:MM:SS.0 PM")}, f"Unexpected time: {abs_time}"
+            assert self._phase_to_time, 'To use HH:MM:SS times, please pass phase times to, i.e. Script(c1 = "YYYY/MM/DD HH:MM:SS.f PM", ...)'
             phase = self._phase_to_time[self._phase]
             time = dateutil.parser.parse(f"{phase.year}/{phase.month}/{phase.day} {abs_time}")
             self.offset = (time - phase).total_seconds()
 
         exposure = copy.copy(exposure) if exposure else copy.copy(self._exposure)
-        if isinstance(exposure, int):
+        if isinstance(exposure, int) or isinstance(exposure, float):
             exposure = Exposure(exposure)
 
         self._events.append([
@@ -121,7 +125,7 @@ class Script:
             self._comment,
         ])
 
-        self.offset += max(self._minimum_time_step, exposure)
+        self.offset += float(exposure) + self._minimum_time_step
 
     def capture_bracket(self, num_exposures, ev_step=1):
         """
@@ -131,24 +135,30 @@ class Script:
         assert num_exposures % 2 == 1, f"num_exposures must be odd, got {num_exposures}"
         assert num_exposures >= 3, f"num_exposures must be >= 3, got {num_exposures}"
         self.incremental = "N"
-        # Centered shot.
-        self.capture()
-        self.incremental = "Y"
+
+        center = self._exposure
+        exposures = [center]
 
         # How many faster or slower are left?
         num_exposures -= 1
         num_exposures //= 2
-
         # Faster exposures.
-        exposure = copy.copy(self._exposure)
+        exposure = copy.copy(center)
         for i in range(num_exposures):
             exposure -= ev_step
-            self.capture(exposure=exposure)
+            exposures.append(exposure)
 
         # Slower exposures.
-        exposure = copy.copy(self._exposure)
+        exposure = copy.copy(center)
         for i in range(num_exposures):
             exposure += ev_step
+            exposures.append(exposure)
+        exposures = sorted(exposures)
+
+        self.incremental = "N"
+        self.capture(exposure=exposures[0])
+        self.incremental = "Y"
+        for exposure in exposures[1:]:
             self.capture(exposure=exposure)
 
     @property
@@ -168,19 +178,21 @@ class Script:
         assert value in {"C1", "C2", "MAX", "C3", "C4"}
         self._phase = value
 
-    def save(self, filename):
+    def __str__(self):
         """
         Verifies all time constraints and writes out csv file that should be
         loadable by Eclipse Orchestrator.
         """
         DATE_FMT = "%Y/%m/%d,%H:%M:%S.%f"
-        out = "# Comment out these event times to use GPS time on the laptop\n"
-        out += "#Event,Date,Time\n"
-        out += f"C1,  {self._c1.strftime(DATE_FMT)}\n"
-        out += f"C2,  {self._c2.strftime(DATE_FMT)}\n"
-        out += f"MAX, {self._max.strftime(DATE_FMT)}\n"
-        out += f"C3,  {self._c3.strftime(DATE_FMT)}\n"
-        out += f"C4,  {self._c4.strftime(DATE_FMT)}\n"
+        out = ""
+        if self._phase_to_time:
+            out = "# Comment out these event times to use GPS time on the laptop\n"
+            out += "#Event,Date,Time\n"
+            out += f"C1,  {self._c1.strftime(DATE_FMT)}\n"
+            out += f"C2,  {self._c2.strftime(DATE_FMT)}\n"
+            out += f"MAX, {self._max.strftime(DATE_FMT)}\n"
+            out += f"C3,  {self._c3.strftime(DATE_FMT)}\n"
+            out += f"C4,  {self._c4.strftime(DATE_FMT)}\n"
         out += "#Action,Date/Ref,Offset sign,Time (offset),Camera,Exposure,Aperture,ISO,MLU,Quality,Size,Incremental,Comment\n"
 
         for event in self._events:
@@ -207,9 +219,11 @@ class Script:
                 time_offset -= Dur.hour * hours
                 minutes = int(time_offset / Dur.minute)
                 seconds = time_offset - Dur.minute * minutes
-                out += f"TAKEPIC,{phase},{sign},{hours:02d}:{minutes:02d}:{seconds:04.1f},{camera},{exposure},{fstop:4.1f},{iso:4d},{mlu},{quality},None,{incremental},{comment}\n"
+                exposure = f"{exposure}"
+                out += f"TAKEPIC,{phase},{sign},{hours:02d}:{minutes:02d}:{seconds:04.1f},{camera},{exposure:6s},{fstop:4.1f},{iso:4d},{mlu},{quality},None,{incremental},{comment}\n"
+        return out
 
+    def save(self, filename):
         with open(filename, "w") as fout:
-            fout.write(out)
-
+            fout.write(str(self) + "\n")
         print(f"Wrote {filename}")

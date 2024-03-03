@@ -96,11 +96,17 @@ class Exposure:
 
     def __truediv__(self, denominator):
         assert denominator != 0, "Division by 0!"
-        self._time /= float(denominator)
+        return Exposure(self._time, denominator)
 
-        return self
+    def __float__(self):
+        return self._time
 
     def __add__(self, ev_stops):
+        """
+        Manipulate exposure via exposure values, i.e. stops of light.
+
+        See https://en.wikipedia.org/wiki/Exposure_value
+        """
         out = copy.copy(self)
         # Convert to exposure value.
         ev = math.log2(1.0 / self._time)

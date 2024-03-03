@@ -63,20 +63,12 @@ script.comment = "diamond ring / baily's beads"
 # script.file_comment = "# C2 diamond ring / baily's beads - bracket 8"
 # script.capture_bracket(7)
 
-script.file_comment = "# Testing brackets -------------------------------"
-script.capture_bracket(3)
-script.offset += 3.0
-script.capture_bracket(5)
-script.offset += 3.0
-script.capture_bracket(7)
-script.offset += 3.0
-script.capture_bracket(9)
-script.offset += 3.0
-script.capture_bracket(11)
-script.offset += 3.0
-script.capture_bracket(7, ev_step=2)
-script.offset += 3.0
-script.capture_bracket(7, ev_step=0.3333)
+script.comment = "bracket test"
+
+script.exposure = _1 / 15
+script.capture_bracket(19)
+
+
 
 
 script.save("nick.csv")

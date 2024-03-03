@@ -20,6 +20,12 @@ class TestExposure(unittest.TestCase):
         ex = Exposure(8/2)
         assert str(ex) == "4"
 
+        _1 = Exposure(1)
+        assert str(_1/400) == "1/400"
+        assert str(_1/500) == "1/500"
+        assert str(_1/800) == "1/800"
+
+
     def test_add_full_stops(self):
 
         ex = Exposure(1) / 8000
@@ -60,6 +66,10 @@ class TestExposure(unittest.TestCase):
         assert str(ex) == "15"
         ex += 1
         assert str(ex) == "30"
+        ex -= 1
+        assert str(ex) == "15"
+        ex -= 1
+        assert str(ex) == "8"
 
     def test_add_third_stops(self):
 
