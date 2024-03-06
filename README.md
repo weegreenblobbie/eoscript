@@ -49,3 +49,16 @@ If you're missing photos:
 trigger many exposures back to back.
 * Add timing delay between exposures by setting up a larger `minimum_time_step`.
 
+GPS
+====
+Any standard Serial or USB based GPS dongle should work. If using a serial port GPS, FTDI based devices have a better
+track record with EO than prolific ones.
+
+The dongle that was found to work with EO can be purchased from Amazon here: https://a.co/d/25HXdal
+
+It is recommended that the ublox u-center app is installed on windows and the GPS dongle is set to emit
+only GP* NMEA strings. EO only understands GPS satellite strings and can't parse GLONASS or BeiDou satellite NMEA strings.
+Check this CN thread on how to do that: https://www.cloudynights.com/topic/910898-eclipse-orchestrator-and-gps-module-help/
+
+When using a GPS device, ensure that ther ClkErr in EO is less than .1s. This can be seen at the top of the EO interface.
+
