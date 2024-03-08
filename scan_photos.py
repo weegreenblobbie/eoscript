@@ -14,7 +14,7 @@ def get_timestamp(tags):
     frac_sec = int(tags['EXIF SubSecTime'].values)
 
     local_time = dateutil.parser.parse(
-        f"{date} {time}.{frac_sec:02d}",
+        f"{date} {time}.{frac_sec:03d}",
         #tzinfos={"PST":dateutil.tz.gettz("America/Los_Angeles")},
     )
 
@@ -31,7 +31,7 @@ def get_timeoffset(time, reference):
     time_offset -= 3600.0 * hours
     minutes = int(time_offset / 60.0)
     seconds = time_offset - 30.0 * minutes
-    return f"{sign},{hours:02d}:{minutes:02d}:{seconds:04.1f}"
+    return f"{sign},{hours:02d}:{minutes:02d}:{seconds:06.3f}"
 
 
 def main():
@@ -45,6 +45,7 @@ def main():
     files = sorted(glob.glob(os.path.join(args.input_dir, "*")))
     data = []
     time_ref = None
+    count = 0
 
     for filename in files:
         with open(filename, 'rb') as fin:
@@ -69,6 +70,11 @@ def main():
         iso = str(iso)
 
         print(f"{filename:32s}, {time_offset}, {camera}, {exposure:6s}, {fstop:4s}, {iso:4s}, {quality}")
+
+        time_ref = timestamp
+        count += 1
+
+    print(f"{count} files")
 
 
 if __name__ == "__main__":

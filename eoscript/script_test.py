@@ -33,13 +33,13 @@ class TestExposure(unittest.TestCase):
 
         expected = textwrap.dedent("""\
             #Action,Date/Ref,Offset sign,Time (offset),Camera,Exposure,Aperture,ISO,MLU,Quality,Size,Incremental,Comment
-            TAKEPIC,C1,+,00:00:00.0,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
-            TAKEPIC,C1,+,00:00:03.0,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
-            TAKEPIC,C1,+,00:00:06.0,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
+            TAKEPIC,C1,+,00:00:00.000,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
+            TAKEPIC,C1,+,00:00:03.002,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
+            TAKEPIC,C1,+,00:00:06.005,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
             # testing a file comment
-            TAKEPIC,C1,+,00:00:09.0,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
-            TAKEPIC,C1,+,00:00:12.0,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
-            TAKEPIC,C1,+,00:00:15.0,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
+            TAKEPIC,C1,+,00:00:09.008,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
+            TAKEPIC,C1,+,00:00:12.010,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
+            TAKEPIC,C1,+,00:00:15.012,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,N,test basics
             """)
         assert compare(str(script), expected)
 
@@ -57,15 +57,15 @@ class TestExposure(unittest.TestCase):
         script.capture_bracket(5)
         expected = textwrap.dedent("""\
             #Action,Date/Ref,Offset sign,Time (offset),Camera,Exposure,Aperture,ISO,MLU,Quality,Size,Incremental,Comment
-            TAKEPIC,C2,-,00:00:15.0,Nikon Z7,1/800 , 8.0, 800,0.0,RAW+F-JPG,None,N,test bracket
-            TAKEPIC,C2,-,00:00:12.0,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
-            TAKEPIC,C2,-,00:00:09.0,Nikon Z7,1/200 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
+            TAKEPIC,C2,-,00:00:15.000,Nikon Z7,1/800 , 8.0, 800,0.0,RAW+F-JPG,None,N,test bracket
+            TAKEPIC,C2,-,00:00:11.999,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
+            TAKEPIC,C2,-,00:00:08.996,Nikon Z7,1/200 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
             # testing a file comment
-            TAKEPIC,C2,-,00:00:06.0,Nikon Z7,1/1600, 8.0, 800,0.0,RAW+F-JPG,None,N,test bracket
-            TAKEPIC,C2,-,00:00:03.0,Nikon Z7,1/800 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
-            TAKEPIC,C2,+,00:00:00.0,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
-            TAKEPIC,C2,+,00:00:03.0,Nikon Z7,1/200 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
-            TAKEPIC,C2,+,00:00:06.0,Nikon Z7,1/100 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
+            TAKEPIC,C2,-,00:00:05.991,Nikon Z7,1/1600, 8.0, 800,0.0,RAW+F-JPG,None,N,test bracket
+            TAKEPIC,C2,-,00:00:02.991,Nikon Z7,1/800 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
+            TAKEPIC,C2,+,00:00:00.011,Nikon Z7,1/400 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
+            TAKEPIC,C2,+,00:00:03.013,Nikon Z7,1/200 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
+            TAKEPIC,C2,+,00:00:06.018,Nikon Z7,1/100 , 8.0, 800,0.0,RAW+F-JPG,None,Y,test bracket
             """)
         assert compare(str(script), expected)
 
@@ -83,8 +83,8 @@ class TestExposure(unittest.TestCase):
         script.capture()
         expected = textwrap.dedent("""\
             #Action,Date/Ref,Offset sign,Time (offset),Camera,Exposure,Aperture,ISO,MLU,Quality,Size,Incremental,Comment
-            TAKEPIC,MAX,+,00:00:00.0,Nikon Z7,8     , 8.0,  64,0.0,RAW+F-JPG,None,N,long exposure
-            TAKEPIC,MAX,+,00:00:11.0,Nikon Z7,8     , 8.0,  64,0.0,RAW+F-JPG,None,N,long exposure
-            TAKEPIC,MAX,+,00:00:22.0,Nikon Z7,8     , 8.0,  64,0.0,RAW+F-JPG,None,N,long exposure
+            TAKEPIC,MAX,+,00:00:00.000,Nikon Z7,8     , 8.0,  64,0.0,RAW+F-JPG,None,N,long exposure
+            TAKEPIC,MAX,+,00:00:11.000,Nikon Z7,8     , 8.0,  64,0.0,RAW+F-JPG,None,N,long exposure
+            TAKEPIC,MAX,+,00:00:22.000,Nikon Z7,8     , 8.0,  64,0.0,RAW+F-JPG,None,N,long exposure
             """)
         assert compare(str(script), expected)

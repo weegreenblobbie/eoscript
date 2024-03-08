@@ -21,6 +21,7 @@ class Script:
         self._exposure = None
         self._fstop = None
         self._iso = None
+        self._release_command = "TAKEPIC"
         self._phase = None
         self._offset = 0.0
         self._qualiy = Quality.raw_fjpg
@@ -97,6 +98,15 @@ class Script:
     def file_comment(self, comment):
         self._events.append(comment)
 
+    @property
+    def release_command(self):
+        return self._release_command
+
+    @release_command.setter
+    def release_command(self, command):
+        assert command in {"TAKEPIC", "RELEASE"}
+        self._release_command = command
+
     def capture(self, abs_time=None, exposure=None):
         # A phase must have been selected.
         assert self._phase, "Phase hasn't been specified!"
@@ -114,6 +124,7 @@ class Script:
             exposure = Exposure(exposure)
 
         self._events.append([
+            self._release_command,
             self._offset,
             self._phase,
             self._camera,
@@ -126,6 +137,25 @@ class Script:
         ])
 
         self.offset += float(exposure) + self._minimum_time_step
+
+    def send_exposure(self):
+        # A phase must have been selected.
+        assert self._phase, "Phase hasn't been specified!"
+        exposure = copy.copy(self._exposure)
+        self._events.append([
+            "SETEXP",
+            self._offset,
+            self._phase,
+            self._camera,
+            exposure,
+            self._fstop,
+            self._iso,
+            self._mirror_lock_up,
+            "N",
+            self._comment,
+        ])
+        self._incremental = "Y"
+
 
     def capture_bracket(self, num_exposures, ev_step=1):
         """
@@ -200,6 +230,7 @@ class Script:
                 out += event + "\n"
             else:
                 [
+                    command,
                     time_offset,
                     phase,
                     camera,
@@ -220,7 +251,7 @@ class Script:
                 minutes = int(time_offset / Dur.minute)
                 seconds = time_offset - Dur.minute * minutes
                 exposure = f"{exposure}"
-                out += f"TAKEPIC,{phase},{sign},{hours:02d}:{minutes:02d}:{seconds:04.1f},{camera},{exposure:6s},{fstop:4.1f},{iso:4d},{mlu},{quality},None,{incremental},{comment}\n"
+                out += f"{command},{phase},{sign},{hours:02d}:{minutes:02d}:{seconds:06.3f},{camera},{exposure:6s},{fstop:4.1f},{iso:4d},{mlu},{quality},None,{incremental},{comment}\n"
         return out
 
     def save(self, filename):
