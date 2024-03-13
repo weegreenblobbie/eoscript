@@ -1,0 +1,393 @@
+# Keep these commented out to use the computed contact times of the computer.
+# Add a GPS receiver to get < 1s accurate computed contact times.
+# Event, Date, Time
+# C1,  2024/04/08,17:21:27.500000
+# C2,  2024/04/08,18:38:46.600000
+# MAX, 2024/04/08,18:40:58.000000
+# C3,  2024/04/08,18:43:09.400000
+# C4,  2024/04/08,20:01:20.900000
+#
+# C1:C2  duration: 01:17:19.100
+# C2:MAX duration: 00:02:11.400
+# MAX:C3 duration: 00:02:11.400
+# C3:4   duration: 01:18:11.500
+#
+# Action, Date/Ref, Offset sign, Time (offset), Camera, Exposure, Aperture, ISO, MLU, Quality, Size, Incremental, Comment
+#------------------------------------------------------------------------------------------------------------------------
+# C1 -> C2: partials
+#------------------------------------------------------------------------------------------------------------------------
+TAKEPIC,C1,+,00:01:59.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:02:00.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:02:02.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:10:07.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:10:08.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:10:10.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:18:15.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:18:16.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:18:18.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:26:23.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:26:24.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:26:26.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:34:31.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:34:32.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:34:34.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:42:39.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:42:40.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:42:42.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:50:47.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:50:48.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:50:50.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:58:55.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:58:56.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,00:58:58.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,01:07:03.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,01:07:04.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,01:07:06.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,01:15:18.500,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,01:15:19.790,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+TAKEPIC,C1,+,01:15:21.080,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C1 -> C2 partials
+#------------------------------------------------------------------------------------------------------------------------
+# C2 fast exposures for diamond ring & baily's beads.
+#------------------------------------------------------------------------------------------------------------------------
+SETEXP,C2,-,00:00:12.317,Nikon Z7,1/500 , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,-,00:00:11.067,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:10.732,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:10.397,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:10.062,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:09.727,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:09.392,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:09.057,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:08.722,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:08.387,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:08.052,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:07.717,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:07.382,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:07.047,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:06.712,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:06.377,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:06.042,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:05.707,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:05.372,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:05.037,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:04.702,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:04.367,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:04.032,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:03.697,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:03.362,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:03.027,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:02.692,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:02.357,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:02.022,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:01.687,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:01.352,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:01.017,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:00.682,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:00.347,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,-,00:00:00.012,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,+,00:00:00.323,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,+,00:00:00.658,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,+,00:00:00.993,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,+,00:00:01.328,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,+,00:00:01.663,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C2,+,00:00:01.998,Nikon Z7, 0.050,,,,,,,fast burst
+#------------------------------------------------------------------------------------------------------------------------
+# C2 long exposures for Earthshine
+#------------------------------------------------------------------------------------------------------------------------
+TAKEPIC,C2,+,00:00:02.666,Nikon Z7,20    , 8.0,  64,0.0,RAW+F-JPG,None,N,long exposures for Earthshine
+#------------------------------------------------------------------------------------------------------------------------
+# C2 -> MAX: fast bursts for stacking
+#------------------------------------------------------------------------------------------------------------------------
+SETEXP,C2,+,00:00:24.249,Nikon Z7,4     , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:00:25.499,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:00:29.928,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:00:34.357,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:00:38.786,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:00:43.215,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:00:47.644,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:00:52.073,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:00:56.835,Nikon Z7,2     , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:00:58.085,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:00.466,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:02.847,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:05.228,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:07.609,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:09.990,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:12.371,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:01:15.085,Nikon Z7,1     , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:01:16.335,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:17.692,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:19.049,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:20.406,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:21.763,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:23.120,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:24.477,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:01:26.167,Nikon Z7,1/2   , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:01:27.417,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:28.262,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:29.107,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:29.952,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:30.797,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:31.642,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:32.487,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:01:33.665,Nikon Z7,1/4   , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:01:34.915,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:35.504,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:36.093,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:36.682,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:37.271,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:37.860,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:38.449,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:01:39.371,Nikon Z7,1/8   , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:01:40.621,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:41.082,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:41.543,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:42.004,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:42.465,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:42.926,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:43.387,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:01:44.181,Nikon Z7,1/15  , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:01:45.431,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:45.828,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:46.225,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:46.622,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:47.019,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:47.416,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:47.813,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:01:48.543,Nikon Z7,1/30  , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:01:49.793,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:50.158,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:50.523,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:50.888,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:51.253,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:51.618,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:51.983,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:01:52.681,Nikon Z7,1/60  , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:01:53.931,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:54.280,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:54.629,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:54.978,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:55.327,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:55.676,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:56.025,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:01:56.707,Nikon Z7,1/125 , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:01:57.957,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:58.298,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:58.639,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:58.980,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:59.321,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:01:59.662,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:00.003,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:00.677,Nikon Z7,1/250 , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:01.927,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:02.264,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:02.601,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:02.938,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:03.275,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:03.612,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:03.949,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:04.619,Nikon Z7,1/500 , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:05.869,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:06.204,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:06.539,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:06.874,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:07.209,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:07.544,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:07.879,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:08.547,Nikon Z7,1/1000, 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:09.797,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:10.131,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:10.465,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:10.799,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:11.133,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:11.467,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:11.801,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+# C2,+,00:02:11  is Max Totality !!!
+#------------------------------------------------------------------------------------------------------------------------
+# MAX -> C3: fast bursts for stacking
+#------------------------------------------------------------------------------------------------------------------------
+RELEASE,C2,+,00:02:12.135,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:12.469,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:12.803,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:13.137,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:13.471,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:13.805,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:14.139,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:14.806,Nikon Z7,1/500 , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:16.056,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:16.391,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:16.726,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:17.061,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:17.396,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:17.731,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:18.066,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:18.734,Nikon Z7,1/250 , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:19.984,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:20.321,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:20.658,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:20.995,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:21.332,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:21.669,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:22.006,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:22.676,Nikon Z7,1/125 , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:23.926,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:24.267,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:24.608,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:24.949,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:25.290,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:25.631,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:25.972,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:26.646,Nikon Z7,1/60  , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:27.896,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:28.245,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:28.594,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:28.943,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:29.292,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:29.641,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:29.990,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:30.672,Nikon Z7,1/30  , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:31.922,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:32.287,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:32.652,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:33.017,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:33.382,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:33.747,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:34.112,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:34.810,Nikon Z7,1/15  , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:36.060,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:36.457,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:36.854,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:37.251,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:37.648,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:38.045,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:38.442,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:39.172,Nikon Z7,1/8   , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:40.422,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:40.883,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:41.344,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:41.805,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:42.266,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:42.727,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:43.188,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:43.982,Nikon Z7,1/4   , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:45.232,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:45.821,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:46.410,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:46.999,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:47.588,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:48.177,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:48.766,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:49.688,Nikon Z7,1/2   , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:50.938,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:51.783,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:52.628,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:53.473,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:54.318,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:55.163,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:56.008,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:02:57.186,Nikon Z7,1     , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:02:58.436,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:02:59.793,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:01.150,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:02.507,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:03.864,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:05.221,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:06.578,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:03:08.268,Nikon Z7,2     , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:03:09.518,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:11.899,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:14.280,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:16.661,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:19.042,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:21.423,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:23.804,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+SETEXP,C2,+,00:03:26.518,Nikon Z7,4     , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C2,+,00:03:27.768,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:32.197,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:36.626,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:41.055,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:45.484,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:49.913,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+RELEASE,C2,+,00:03:54.342,Nikon Z7, 0.050,,,,,,,Fast manual stacks
+# C2,+,00:04:22 is end of totality
+#------------------------------------------------------------------------------------------------------------------------
+# C2 long exposures for Earthshine
+#------------------------------------------------------------------------------------------------------------------------
+TAKEPIC,C2,+,00:03:59.104,Nikon Z7,15    , 8.0,  64,0.0,RAW+F-JPG,None,N,long exposures for Earthshine
+#------------------------------------------------------------------------------------------------------------------------
+# C3 fast exposures for diamond ring & baily's beads.
+#------------------------------------------------------------------------------------------------------------------------
+SETEXP,C3,-,00:00:02.917,Nikon Z7,1/500 , 8.0,  64,0.0,RAW+F-JPG,None,N,sending all camera exposure settings via USB
+RELEASE,C3,-,00:00:01.667,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,-,00:00:01.332,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,-,00:00:00.997,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,-,00:00:00.662,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,-,00:00:00.327,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:00.008,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:00.343,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:00.678,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:01.013,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:01.348,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:01.683,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:02.018,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:02.353,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:02.688,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:03.023,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:03.358,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:03.693,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:04.028,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:04.363,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:04.698,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:05.033,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:05.368,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:05.703,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:06.038,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:06.373,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:06.708,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:07.043,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:07.378,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:07.713,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:08.048,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:08.383,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:08.718,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:09.053,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:09.388,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:09.723,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:10.058,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:10.393,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:10.728,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:11.063,Nikon Z7, 0.050,,,,,,,fast burst
+RELEASE,C3,+,00:00:11.398,Nikon Z7, 0.050,,,,,,,fast burst
+#------------------------------------------------------------------------------------------------------------------------
+# C3 -> C4: partials
+#------------------------------------------------------------------------------------------------------------------------
+TAKEPIC,C3,+,00:01:59.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:02:00.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:02:02.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:10:13.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:10:14.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:10:16.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:18:27.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:18:28.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:18:30.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:26:41.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:26:42.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:26:44.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:34:55.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:34:56.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:34:58.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:43:09.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:43:10.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:43:12.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:51:23.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:51:24.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:51:26.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:59:37.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:59:38.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,00:59:40.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,01:07:51.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,01:07:52.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,01:07:54.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,01:16:10.600,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,01:16:11.890,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+TAKEPIC,C3,+,01:16:13.180,Nikon Z7,1/25  , 8.0,  64,0.0,RAW+F-JPG,None,N,C3 -> C4 partials
+
