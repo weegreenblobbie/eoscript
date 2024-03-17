@@ -136,7 +136,13 @@ class Script:
 
     @offset.setter
     def offset(self, value):
-        self._offset = value
+        if isinstance(value, str):
+            assert self._phase_to_time, 'To use HH:MM:SS times, please pass phase times to, i.e. Script(c1 = "YYYY/MM/DD HH:MM:SS.f", ...)'
+            phase = self._phase_to_time[self._phase]
+            time = dateutil.parser.parse(f"{phase.year}/{phase.month}/{phase.day} {value}")
+            self._offset = (time - phase).total_seconds()
+        else:
+            self._offset = value
 
     @property
     def phase(self):
@@ -162,23 +168,18 @@ class Script:
         self.file_comment = f"# {message}"
         self.file_comment = f"#{width * '-'}"
 
-    def capture(self, abs_time=None, exposure=None):
+    def capture(self, exposure=None):
         # A phase must have been selected.
         assert self._phase, "Phase hasn't been specified!"
         assert self._camera, "Camera hasn't been specified!"
         assert self._fstop, "F-Stop hasn't been specified!"
         assert self._iso, "ISO hasn't been specified!"
 
-        if isinstance(abs_time, str):
-            assert self._phase_to_time, 'To use HH:MM:SS times, please pass phase times to, i.e. Script(c1 = "YYYY/MM/DD HH:MM:SS.f", ...)'
-            phase = self._phase_to_time[self._phase]
-            time = dateutil.parser.parse(f"{phase.year}/{phase.month}/{phase.day} {abs_time}")
-            self.offset = (time - phase).total_seconds()
-
         if exposure is not None:
             self.release_command = "TAKEPIC"
         exposure = copy.copy(exposure) if exposure else copy.copy(self._exposure)
-        if isinstance(exposure, int) or isinstance(exposure, float):
+        assert type(exposure) in {int, float, Exposure}, f"Expected exposure type to be in [int, float, Exposure], got {type(exposure)}"
+        if type(exposure) in {int, float}:
             exposure = Exposure(exposure)
 
         if self._release_command == "RELEASE":

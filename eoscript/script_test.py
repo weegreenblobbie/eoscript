@@ -134,16 +134,26 @@ class TestExposure(unittest.TestCase):
         script.comment = "C1 -> C2 partials"
 
         # All times are UTC!!!
-        script.capture("17:23:27")
-        script.capture("17:31:35")
-        script.capture("17:39:43")
-        script.capture("17:47:51")
-        script.capture("17:55:59")
-        script.capture("18:04:07")
-        script.capture("18:12:15")
-        script.capture("18:20:23")
-        script.capture("18:28:31")
-        script.capture("18:36:46")
+        script.offset = "17:23:27"
+        script.capture()
+        script.offset = "17:31:35"
+        script.capture()
+        script.offset = "17:39:43"
+        script.capture()
+        script.offset = "17:47:51"
+        script.capture()
+        script.offset = "17:55:59"
+        script.capture()
+        script.offset = "18:04:07"
+        script.capture()
+        script.offset = "18:12:15"
+        script.capture()
+        script.offset = "18:20:23"
+        script.capture()
+        script.offset = "18:28:31"
+        script.capture()
+        script.offset = "18:36:46"
+        script.capture()
 
         script.banner("C3 -> C4: partials")
         script.iso = 800
@@ -152,16 +162,26 @@ class TestExposure(unittest.TestCase):
         script.comment = "C3 -> C4 partials"
 
         # All times are UTC!!!
-        script.capture("18:45:09")
-        script.capture("18:53:23")
-        script.capture("19:01:37")
-        script.capture("19:09:51")
-        script.capture("19:18:05")
-        script.capture("19:26:19")
-        script.capture("19:34:33")
-        script.capture("19:42:47")
-        script.capture("19:51:01")
-        script.capture("19:59:20")
+        script.offset = "18:45:09"
+        script.capture()
+        script.offset = "18:53:23"
+        script.capture()
+        script.offset = "19:01:37"
+        script.capture()
+        script.offset = "19:09:51"
+        script.capture()
+        script.offset = "19:18:05"
+        script.capture()
+        script.offset = "19:26:19"
+        script.capture()
+        script.offset = "19:34:33"
+        script.capture()
+        script.offset = "19:42:47"
+        script.capture()
+        script.offset = "19:51:01"
+        script.capture()
+        script.offset = "19:59:20"
+        script.capture()
 
         expected = textwrap.dedent("""\
             # Keep these commented out to use the computed contact times of the computer.

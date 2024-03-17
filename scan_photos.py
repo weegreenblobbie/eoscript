@@ -8,10 +8,23 @@ import exifread
 import dateutil.parser
 
 
-def get_timestamp(tags):
+def get_timestamp_nikon(tags):
     date, time = str(tags['Image DateTimeOriginal']).split(" ")
     date = date.replace(":", "-")
     frac_sec = int(tags['EXIF SubSecTime'].values)
+
+    local_time = dateutil.parser.parse(
+        f"{date} {time}.{frac_sec:03d}",
+        #tzinfos={"PST":dateutil.tz.gettz("America/Los_Angeles")},
+    )
+
+    return local_time
+
+
+def get_timestamp_sony(tags):
+    date, time = str(tags['EXIF DateTimeOriginal']).split(" ")
+    date = date.replace(":", "-")
+    frac_sec = 0
 
     local_time = dateutil.parser.parse(
         f"{date} {time}.{frac_sec:03d}",
@@ -54,7 +67,15 @@ def main():
         if not tags:
             continue
 
-        timestamp = get_timestamp(tags)
+        make = tags["Image Make"].values.lower()
+
+        if "sony" in make:
+            timestamp = get_timestamp_sony(tags)
+        elif "nikon" in make:
+            timestamp = get_timestamp_nikon(tags)
+        else:
+            raise ValueError(f"Don't know how to read {make}")
+
         if time_ref is None:
             time_ref = timestamp
 
@@ -63,13 +84,13 @@ def main():
         exposure = tags['EXIF ExposureTime']
         iso = tags['EXIF ISOSpeedRatings']
         fstop = tags['EXIF FNumber']
-        quality = tags['MakerNote Quality']
+        quality = tags.get('MakerNote Quality', "???")
 
         exposure = str(exposure)
         fstop = str(fstop)
         iso = str(iso)
 
-        print(f"{filename:32s}, {time_offset}, {camera}, {exposure:6s}, {fstop:4s}, {iso:4s}, {quality}")
+        print(f"{filename:40s}, {time_offset}, {camera}, {exposure:6s}, {fstop:4s}, {iso:4s}, {quality}")
 
         time_ref = timestamp
         count += 1
